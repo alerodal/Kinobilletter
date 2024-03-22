@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <title>Kinobilletter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="kino.js"></script>
+    <style>
+        #antall{
+            width: 30px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>Bestilling av kinobilletter</h1>
+
+<label for="film">Velg film:</label>
+<select name="film" id="film">
+    <option value="velg">Velg film her</option>
+    <option value="Home Alone 1">Home Alone 1</option>
+    <option value="Home Alone 2">Home Alone 2</option>
+    <option value="Home Alone 3">Home Alone 3</option>
+</select>
+<span id="filmError" style="color: red"></span>
+
+<p>
+<label for="antall">Antall</label>
+<input type="number" id="antall">
+<span id="antallError" style="color: red"></span>
+</p>
+
+
+<table>
+    <tr>
+        <td><label for="fornavn">Fornavn</label></td>
+        <td>
+            <input type="text" id="fornavn">
+            <span id="fornavnError" style="color: red"></span>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td><label for="etternavn">Etternavn</label></td>
+        <td>
+            <input type="text" id="etternavn">
+            <span id="etternavnError" style="color: red"></span>
+        </td>
+    </tr>
+
+    <tr>
+        <td><label for="telefonnr">Telefonnr</label></td>
+        <td>
+            <input type="text" id="telefonnr">
+            <span id="telefonError" style="color: red"></span>
+        </td>
+    </tr>
+
+    <tr>
+        <td><label for="epost">Epost</label></td>
+        <td>
+            <input type="text" id="epost">
+            <span id="epostError" style="color: red"></span>
+        </td>
+    </tr>
+
+</table>
+
+<button onclick="kjopBillett();">Kjøp billett</button>
+
+<h2>Alle billetter</h2>
+
+<button onclick="slettBillett();">Slett alle billettene</button>
+
+<div id="ut"></div>
+
+
+
+</body>
+</html>
